@@ -1,0 +1,22 @@
+/* 新增动画的样式只作用于 lc 命名空间，不重写原网页的布局、悬浮或滚动效果。 */
+.lc-layer { position: absolute; inset: 0; z-index: 4; pointer-events: none; contain: layout style; }
+.lc-particle { position: absolute; left: 0; top: 0; pointer-events: none; transform-origin: 50% 50%; }
+.lc-logo-art { position: relative; transform-origin: 0 0; }
+.lc-logo-art img { display: block; max-width: none; }
+.lc-badge { display: flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 22px; background: #b3c7ce; color: #010705; font-weight: 700; line-height: 14px; text-align: center; }
+.lc-badge-orange { background: #d9793d; color: #fff; }
+.lc-badge-regular { font-weight: 400; }
+.lc-visual { position: absolute; width: 36px; height: 36px; transform-origin: 0 0; pointer-events: none; }
+.lc-ring { position: absolute; inset: 0; width: 36px; height: 36px; opacity: 0; transform-origin: 50% 50%; }
+.lc-ring img { position: absolute; left: -.45px; top: -.45px; max-width: none; }
+.lc-icon { position: absolute; left: 10px; top: 8px; width: 17px; height: 18px; }
+.lc-spark { position: absolute; left: .588867px; top: 2.589844px; width: 14.8233px; height: 14.8224px; transform-origin: 50% 50%; }
+.lc-wand { position: absolute; left: 0; top: 0; width: 3.982732px; height: 18.478622px; transform: matrix(-.707106769,-.707106769,-.707106769,.707106769,15.966919,4.693481); transform-origin: 0 0; }
+.lc-wand svg { position: absolute; left: -1px; top: -1px; }
+.lc-visual svg { display: block; max-width: none; overflow: visible; }
+.lc-original-icon-hidden { visibility: hidden; }
+.hero.lc-pending [data-node-id='356:1932'],
+.hero.lc-pending [data-node-id='356:1899'],
+.hero.lc-pending [data-node-id='356:1928'],
+.hero.lc-pending [data-node-id='356:1930'] { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .lc-layer { display: none; } }

@@ -1,0 +1,82 @@
+@font-face{font-family:'Login PuHuiTi';src:url('assets/login/puhuiti-regular.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:'Login PuHuiTi';src:url('assets/login/puhuiti-semibold.woff') format('woff');font-weight:600;font-display:swap}
+
+/* 桌面几何与 Figma 440:9876 对齐；弹窗与原页面动效独立。 */
+#login-dialog{
+  --login-scale:1;--login-poster-scale:1;--login-form-scale:1;
+  position:fixed;inset:0;margin:auto;padding:0;border:0;
+  width:calc(1319.5px * var(--login-scale));height:calc(500px * var(--login-scale));
+  max-width:none;max-height:none;overflow:visible;transform:translateY(-10.5px);
+  border-radius:calc(20px * var(--login-scale));background:#fff;box-shadow:none;
+  color:#313333;font-family:'PingFang SC','Noto Sans SC',sans-serif;
+}
+#login-dialog::backdrop{background:rgba(1,7,6,.4);backdrop-filter:none}
+#login-dialog .login-card{display:flex;align-items:center;gap:45.5px;width:1319.5px;height:500px;padding-right:50px;overflow:hidden;border-radius:20px;transform:scale(var(--login-scale));transform-origin:0 0;background:#fff}
+#login-dialog button{transition:none;filter:none;transform:none;box-shadow:none;outline-offset:3px}
+#login-dialog button:hover{filter:none}
+#login-dialog .login-promo{position:relative;flex:0 0 591px;height:500px;overflow:hidden;background:linear-gradient(180deg,#010806 7.225%,#31b792 102.4%)}
+#login-dialog .login-poster{position:absolute;inset:0;width:591px;height:500px;transform:scale(var(--login-poster-scale));transform-origin:0 0}
+#login-dialog .login-poster-image{position:absolute;left:11.75px;top:-148px;width:658px;height:658px;max-width:none;object-fit:cover;pointer-events:none}
+#login-dialog .login-promo-title{position:absolute;left:53.293457px;top:41.09375px;font-family:'Inter','PingFang SC',sans-serif;font-weight:700;font-size:50.615093px;line-height:61px;color:#000;white-space:nowrap}
+#login-dialog .login-promo-title-cn{top:102.265625px}
+#login-dialog .login-promo-title-cn span{color:#138d92}
+#login-dialog .login-experience{position:absolute;left:53.75px;top:184px;width:168px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:90.851px;background:linear-gradient(90deg,#38b791,#008489);font-family:'Noto Sans SC',sans-serif;font-weight:400;font-size:22.186666px;line-height:27px;color:#f6fbfe}
+#login-dialog .login-promo-caption{position:absolute;left:70px;top:371px;width:196.237244px;height:52.693333px;display:flex;align-items:center;overflow:hidden;font-family:'Inter','PingFang SC',sans-serif;font-weight:700;font-size:20.8px;line-height:25px;white-space:nowrap}
+#login-dialog .login-promo-caption span{background:linear-gradient(90deg,#38b791,#14595c);background-clip:text;-webkit-background-clip:text;color:transparent}
+#login-dialog .login-promo-symbol{position:absolute;left:323.75px;top:365px;width:10.575768px;height:10.45649px;display:flex;align-items:center;justify-content:center;opacity:.9;mix-blend-mode:darken}
+#login-dialog .login-promo-symbol img{transform:rotate(-5.47deg)}
+#login-dialog .login-promo-rule{position:absolute;left:72.75px;top:366px}
+#login-dialog img{max-width:none;flex:none}
+#login-dialog .login-body{display:flex;align-items:center;gap:40px;width:633px;height:402px;flex:none}
+#login-dialog .login-form-slot{width:321px;height:390px;flex:none}
+#login-dialog .login-form{position:relative;width:321px;height:390px;margin:0;transform:scale(var(--login-form-scale));transform-origin:0 0}
+#login-dialog .login-tabs{position:relative;width:321px;height:44px;font-family:'Login PuHuiTi',sans-serif;font-weight:400}
+#login-dialog .login-tab{position:absolute;top:4px;left:0;width:79px;height:40px;font-size:20px;line-height:40px;color:#949999;white-space:nowrap}
+#login-dialog .login-tab[data-login-mode='phone']{left:109px;top:2px}
+#login-dialog .login-tab[data-login-mode='email']{left:226px;top:0;width:95px}
+#login-dialog .login-tab[aria-selected='true']{top:0;width:95px;font-size:24px;color:#313333}
+#login-dialog .login-tab-line{position:absolute;left:229px;top:35px;pointer-events:none}
+#login-dialog .login-field{position:absolute;left:0;top:88px;width:320px;height:60px}
+#login-dialog .login-field-code{top:159px}
+#login-dialog .login-field-line{position:absolute;inset:0;pointer-events:none}
+#login-dialog .login-input{position:absolute;left:50px;top:21px;width:230px;height:24px;padding:0;border:0;border-radius:0;outline:0;background:transparent;color:#313333;font-family:'PingFang SC','Noto Sans SC',sans-serif;font-weight:400;font-size:24px;line-height:24px;box-shadow:none}
+#login-dialog .login-input::placeholder{color:#b8bdbf;opacity:1}
+#login-dialog .login-field-code .login-input{left:45px;width:190px}
+#login-dialog .login-field-icon{position:absolute;left:4px;top:25px;pointer-events:none}
+#login-dialog .login-field-code .login-field-icon{left:2px;top:27px}
+#login-dialog .login-caret{position:absolute;left:47px;top:19.36px;pointer-events:none;visibility:hidden}
+#login-dialog .login-field:has(.login-input:focus:placeholder-shown) .login-caret{visibility:visible}
+#login-dialog .login-field .login-input:focus:placeholder-shown{caret-color:transparent}
+#login-dialog .login-clear{position:absolute;left:290px;top:18px;width:20px;height:20px}
+#login-dialog .login-send-code{position:absolute;right:0;top:26px;height:14px;line-height:14px;font-size:14px;color:#028580;white-space:nowrap}
+#login-dialog .login-submit{position:absolute;left:0;top:295px;width:320px;height:56px;color:#fff;text-align:center}
+#login-dialog .login-submit img{position:absolute;inset:0;pointer-events:none}
+#login-dialog .login-submit span{position:absolute;left:139px;top:17px;font-size:21px;font-weight:600;line-height:21px}
+#login-dialog .login-register{position:absolute;left:132px;top:366px;width:56px;height:24px;font-size:14px;line-height:24px;color:#028580;white-space:nowrap}
+#login-dialog .login-status{position:absolute;left:0;top:237px;width:320px;font-size:13px;line-height:20px;color:#028580}
+#login-dialog .login-divider{position:relative;flex:none;width:2px;height:402px}
+#login-dialog .login-divider img{position:absolute;left:.5px;top:0}
+#login-dialog .login-wechat{position:relative;flex:none;width:230px;height:354.21875px}
+#login-dialog .login-brand{position:absolute;left:19.999512px;top:-13.597656px;width:190.000595px;height:59.814674px}
+#login-dialog .login-brand-logos{display:flex;align-items:center;gap:11.00386px;width:190px;height:34.478767px}
+#login-dialog .login-brand-ireve{position:relative;width:80.694977px;height:34.478767px;flex:none}
+#login-dialog .login-brand-ireve img{position:absolute;left:0;top:0}
+#login-dialog .login-brand p{position:absolute;left:0;top:41.814674px;width:190px;height:18px;font-family:'Login PuHuiTi',sans-serif;font-weight:600;font-size:13.204633px;line-height:18px;letter-spacing:12.280309px;white-space:nowrap;text-align:center}
+#login-dialog .login-qr{position:absolute;left:20px;top:104.21875px;width:190px;height:220px}
+#login-dialog .login-qr-border{position:absolute;left:0;top:0}
+#login-dialog .login-qr-image{position:absolute;left:2px;top:5px;width:186px;height:184px;object-fit:cover}
+#login-dialog .login-qr p{position:absolute;left:28.5px;top:200px;width:129px;font-size:14px;line-height:20px;letter-spacing:2.333333px;color:#949999;white-space:nowrap;text-align:center}
+#login-dialog .login-sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#login-dialog .login-close:focus-visible{width:auto;height:auto;left:12px;top:12px;padding:8px 12px;clip-path:none;z-index:2;background:#fff;border-radius:6px}
+
+/* 窄屏改为纵向排列；插画整体等比缩放，表单与二维码仍可完整访问。 */
+@media(max-width:760px){
+  #login-dialog{width:min(591px,calc(100vw - 32px));height:auto;max-height:calc(100dvh - 32px);overflow-y:auto;overflow-x:hidden;transform:none;border-radius:20px;overscroll-behavior:contain}
+  #login-dialog .login-card{width:100%;height:auto;display:flex;flex-direction:column;gap:0;padding:0;transform:none;overflow:hidden}
+  #login-dialog .login-promo{width:100%;height:auto;aspect-ratio:591/500;flex:none}
+  #login-dialog .login-body{width:100%;height:auto;padding:36px 16px 30px;flex-direction:column;gap:30px}
+  #login-dialog .login-form-slot{width:calc(321px * var(--login-form-scale));height:calc(390px * var(--login-form-scale));max-width:100%}
+  #login-dialog .login-divider{width:100%;max-width:321px;height:1px;overflow:hidden}
+  #login-dialog .login-divider img{left:50%;top:50%;transform:translate(-50%,-50%) rotate(90deg)}
+  #login-dialog .login-wechat{margin-top:14px}
+}

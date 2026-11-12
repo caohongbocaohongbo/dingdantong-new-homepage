@@ -1,0 +1,93 @@
+/* 光带使用原 SVG 弧线，长距离渐隐与柔边衔接，避免短促的硬线段。 */
+.hero-art .f38::after {content:none;animation:none;}
+.hero-arc-current {position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;mix-blend-mode:screen;}
+.arc-current-window {animation:arc-current-pass 9s linear infinite;animation-delay:-2s;animation-play-state:paused;}
+.arc-current-window-secondary {animation-delay:-6.5s;}
+.fx-playing .arc-current-window {animation-play-state:running;}
+@keyframes arc-current-pass {from{transform:translateX(0);}to{transform:translateX(4300px);}}
+
+/* 原柔边小幅变化；横向出血避免位移后在屏幕边缘露出细缝。 */
+.fx-filter-defs {position:absolute;width:0;height:0;overflow:hidden;pointer-events:none;}
+.fx-soft-edge {filter:var(--edge-filter);transform:scaleX(1.014);transform-origin:center;}
+.transition-art > .ambient-layer {animation:none;}
+
+/* 青绿与冰蓝沿圆角边界融合流动，正文和按钮本体保持稳定。 */
+@property --liquid-angle {syntax:'<angle>';initial-value:0deg;inherits:true;}
+.liquid-edge {
+  --liquid-angle:0deg;--edge-width:1.5px;--edge-duration:18s;
+  position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;
+  animation:liquid-edge-flow var(--edge-duration) linear infinite;animation-play-state:paused;
+}
+.liquid-edge::before,.liquid-edge::after {
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:var(--edge-width);
+  background:conic-gradient(from var(--liquid-angle),#38b7910a 0deg,#38b79135 30deg,#38b7919c 65deg,#a1e5dee6 100deg,#edfdffcc 119deg,#a1e5de80 142deg,#00848914 188deg,#0084890a 210deg,#00848966 245deg,#38b791c7 278deg,#a1e5deb3 302deg,#38b79152 328deg,#38b7910a 360deg);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;
+}
+.liquid-edge::before {filter:blur(.35px);}
+.liquid-edge::after {inset:-2px;padding:calc(var(--edge-width) + 2px);filter:blur(3px);opacity:.4;}
+.liquid-card {border-color:#00848999;}
+.liquid-card > .liquid-edge {inset:-4px;--edge-width:3px;--edge-duration:22s;}
+.liquid-button > .liquid-edge {--edge-width:1.6px;--edge-duration:16s;}
+.fx-playing > .liquid-edge {animation-play-state:running;}
+@keyframes liquid-edge-flow {to{--liquid-angle:360deg;}}
+.hero-layout [data-action='send'] {background-color:#B3C7CE;}
+
+/* 首屏输入框：2.5px 纯白亮芯及短距离柔边，不遮挡文本和快捷浮层。 */
+.hero-layout .motion-goal::before {content:none;}
+.hero-layout .motion-goal:focus-within {box-shadow:0 0 0 3px #ffffff30,0 8px 32px #ffffff20;}
+.liquid-input > .liquid-edge {inset:-1px;--edge-width:2.5px;--edge-duration:12s;}
+.liquid-input > .liquid-edge::before,.liquid-input > .liquid-edge::after {
+  background:conic-gradient(from var(--liquid-angle),#ffffff0d 0deg,#ffffff2e 28deg,#ffffff99 58deg,#fff 92deg,#fff 114deg,#ffffff66 146deg,#ffffff0d 186deg,#ffffff26 216deg,#ffffff99 252deg,#fff 286deg,#fff 310deg,#ffffff59 338deg,#ffffff0d 360deg);
+}
+.liquid-input > .liquid-edge::before {filter:none;}
+.liquid-input > .liquid-edge::after {inset:-1px;padding:calc(var(--edge-width) + 1px);filter:blur(1.5px);opacity:.3;}
+
+/* 两道宽幅金白柔光相差半轮，前一道离开时后一道已进入，连续衔接。 */
+.hero-award-rim {display:none;animation:none!important;}
+.hero-award-sheen {
+  background:none;mix-blend-mode:screen;z-index:3;opacity:1;
+  animation:none;animation-play-state:paused;
+}
+.hero-award-sheen::before,.hero-award-sheen::after {
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:
+    radial-gradient(ellipse at 50% 44%,#fffbe826 0%,#fff9df12 24%,transparent 49%),
+    linear-gradient(112deg,transparent 24%,#fff8df00 33%,#fff8df38 43%,#fffdf080 50%,#fff8df38 57%,transparent 67%);
+  background-size:280% 180%,260% 160%;
+  background-position:130% 38%,140% 50%;opacity:0;
+  animation:award-liquid-sweep 10s linear infinite;
+  animation-delay:-2.4s;animation-play-state:inherit;
+}
+.hero-award-sheen::after {animation-delay:-7.4s;}
+@keyframes award-liquid-sweep {
+  0% {background-position:130% 38%,140% 50%;background-size:280% 180%,260% 160%;opacity:0;}
+  12% {opacity:.5;}
+  50% {background-size:290% 190%,270% 170%;opacity:.68;}
+  88% {opacity:.5;}
+  100% {background-position:-30% 62%,-40% 50%;background-size:280% 180%,260% 160%;opacity:0;}
+}
+/* 独立新增第三道高光：原有两道柔光不变，渐变强度约为原单道的两倍。 */
+.hero-award-sheen-extra {
+  position:absolute;inset:4px;border-radius:50%;overflow:hidden;
+  pointer-events:none;mix-blend-mode:screen;z-index:4;
+  background:
+    radial-gradient(ellipse at 50% 44%,#fffbe84c 0%,#fff9df24 24%,transparent 49%),
+    linear-gradient(112deg,transparent 24%,#fff8df00 33%,#fff8df70 43%,#fffdf0ff 50%,#fff8df70 57%,transparent 67%);
+  background-size:280% 180%,260% 160%;background-position:130% 38%,140% 50%;
+  opacity:0;animation:award-liquid-sweep 10s linear infinite;
+  animation-delay:-4.9s;animation-play-state:paused;
+}
+.hero-award.motion-in-view .hero-award-sheen-extra {animation-play-state:running;}
+html.motion-suspended .hero-award-sheen-extra {animation-play-state:paused!important;}
+@media(max-width:760px) {.hero-arc-current {opacity:.72;}}
+@media(prefers-reduced-motion:reduce) {
+  .hero-arc-current {display:none;}
+  .fx-soft-edge {filter:none;transform:none;}
+  .liquid-edge {animation:none;--liquid-angle:110deg;}
+  .hero-award-sheen {animation:none!important;opacity:0;}
+  .hero-award-sheen::before,.hero-award-sheen::after {animation:none!important;}
+  .hero-award-rim {animation:none!important;opacity:0;}
+  .hero-award-sheen-extra {animation:none!important;opacity:0;}
+}
