@@ -25,9 +25,9 @@
     </svg>`);
   regions.push(hero);
 
-  // 对现有图片的柔边做小幅像素位移，不逐条改动复杂 SVG 的内部路径。
+  // 核心对比上方保留原波形，取消位移滤镜，避免缩放时出现横向亮线。
+  // 深色区域的过渡图继续使用柔边位移。
   for (const [selector, imageSelector, id, strength, duration] of [
-    ['.wave-art', '.f80 > img', 'order-wave-edge', 12, 24],
     ['.transition-art', '.f1 > img', 'order-transition-edge', 10, 27]
   ]) {
     const region = document.querySelector(selector);

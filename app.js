@@ -144,7 +144,7 @@
     }), { threshold: .06, rootMargin: '60px' });
     reveals.forEach(el => observer.observe(el));
   }
-  // 鼠标输入优先；静止后播放原 SVG，再轮换思考 / 加载与笑眼。
+  // 鼠标输入优先；眨眼独立运行，静止后轮换原 SVG、思考 / 加载与笑眼。
   const toy = $('#fc-toy'), eyes = $('#toy-eyes');
   const faceLayers = { source: $('.toy-source', toy), thinking: $('.toy-thinking', toy), loading: $('.toy-loading', toy), smile: $('.toy-smile', toy) };
   const IDLE_DELAY = 1200, SOURCE_DURATION = 9400;
@@ -192,8 +192,12 @@
     if (!canAnimateToy() || dragPointer !== null) return;
     resetGaze();
     toy.dataset.active = 'true';
-    setExpression('source');
-    phaseTimer = setTimeout(showThinking, SOURCE_DURATION);
+    setExpression('blink');
+    phaseTimer = setTimeout(() => {
+      if (!canAnimateToy()) return;
+      setExpression('source');
+      phaseTimer = setTimeout(showThinking, SOURCE_DURATION);
+    }, 2400);
   }
   function scheduleIdle() {
     clearTimeout(idleTimer);

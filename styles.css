@@ -16,7 +16,7 @@
 #goal-input{resize:none;border:0;outline:0;background:transparent;padding:0;min-height:24px;height:24px;color:#40606a;overflow:hidden}#goal-input::placeholder{color:#bcc7d4;opacity:1}#goal-input:focus-visible{outline:0}.hero-layout [data-node-id='343:4737']:focus-within{box-shadow:0 0 0 4px #38b79120,0 12px 44px #00848912}.hero-layout [data-node-id='349:1871']{transition:background .25s}.hero-layout [data-node-id='343:4737']:has(textarea:not(:placeholder-shown)) [data-node-id='349:1871']{background:#008489}
 .advantages{height:722px;position:relative}.trust{height:91px}.benefit-grid{display:grid;grid-template-columns:404px 770px;margin-top:130px}.benefit-intro .eyebrow{color:#038689;font-family:'Google Sans','Noto Sans SC',sans-serif;font-size:21px;line-height:29px;font-weight:700}.benefit-intro h2{font-size:50px;line-height:69px;font-weight:700}.benefit-actions{display:grid;gap:20px;width:230px;margin-top:79px}.benefit-actions>button{height:58px}.benefit-actions>button:hover{border-color:#38b791;background:#fff;box-shadow:0 8px 24px #0084890d}.accordion-item{height:125px;position:relative;border-top:1px solid #ced7e8}.accordion-item:last-child{border-bottom:1px solid #ced7e8}.accordion-trigger{display:flex;align-items:flex-start;width:100%;height:100%;padding:24px 25px;font-size:18px;line-height:28px;font-weight:700}.accordion-trigger>span:first-child{max-width:315px}.accordion-symbol{margin-left:auto;color:#7885a4;font-weight:400;font-size:24px}.accordion-copy{position:absolute;top:24px;left:340px;width:340px;font-size:16px;line-height:25px;color:var(--muted);pointer-events:none;animation:copy-in .25s ease}.wave-band{height:792px;position:relative;pointer-events:none}.wave-art{position:absolute;left:50%;width:1921px;height:901px;margin-left:-960.5px;top:0}.comparison{height:979.564px;position:relative}.comparison>.content{left:25px}.transition-band{position:relative;height:500px;margin-top:-25.564px;pointer-events:none}.transition-art{position:absolute;left:50%;margin-left:-960.498px;width:1920.996px;height:500px;top:0}.dark-sections{position:relative;background:var(--night);margin-top:-63px;padding-top:248px;padding-bottom:86px;color:#f0f6f7}.scenarios{height:826px}.system{height:724px;margin-top:310px}.pricing{height:844px;margin-top:414px}.footer{height:1120px;position:relative;margin-top:-26px}.footer-art{position:absolute;width:1920px;height:1104px;left:50%;margin-left:-960px;top:0;pointer-events:none}.footer-layout{position:relative;width:1920px;height:1104px;left:50%;margin-left:-960px}.footer-layout a:hover{text-decoration:underline}
 /* 保持原图层图形比例；独立眼睛位移仅发生在面罩的裁切范围内。 */
-#fc-toy{width:196px;height:196px;isolation:isolate;cursor:default;flex-shrink:0}.eye-mask{grid-column:1;grid-row:1;position:relative;width:147.148px;height:101.165px;margin:49px 0 0 26.13px;mask-image:url('assets/567df.svg');mask-size:147.148px 101.165px;mask-repeat:no-repeat;overflow:hidden;pointer-events:none}#toy-eyes{position:absolute;left:32.67px;top:32.67px;margin:0;mask:none;transform:translate(var(--eye-x,0px),var(--eye-y,0px)) rotate(var(--eye-r,0deg));transform-origin:50% 50%;will-change:transform}#toy-eyes>div{transform:scaleY(var(--blink,1));transition:transform .1s ease;transform-origin:center}.system [data-node-id='412:5774']{isolation:isolate}.system [data-node-id='412:5780']{white-space:nowrap}.system [data-node-id='I412:5791;423:3084']{width:190px}.system [data-node-id='412:5766']{pointer-events:none}.system [data-node-id='412:5790']:hover,.system [data-node-id='412:5791']:hover,.system [data-node-id='412:5792']:hover{border-color:#38b791;transition:border-color .25s}.scenarios [role='tab']{text-align:left;transition:background .2s,transform .2s}.scenarios [role='tab']:hover{transform:translateX(3px)}.scenarios [role='tab'][aria-selected='true']{background:linear-gradient(134deg,#008489 14.931%,#38b791 91.301%)!important;border-color:transparent}.scenarios [role='tab'][aria-selected='true'] p{color:white}.scenarios [role='tab'][aria-selected='false']{background:#101f22!important;border:1px solid #2f3c3f}.scenarios [role='tab'][aria-selected='false'] p:first-child{color:#cfe6e2}.scenarios [role='tab'][aria-selected='false'] p:last-child{color:#949999}
+#fc-toy{width:196px;height:196px;isolation:isolate;cursor:default;flex-shrink:0}.eye-mask{grid-column:1;grid-row:1;position:relative;width:147.148px;height:101.165px;margin:49px 0 0 26.13px;mask-image:url('assets/567df.svg');mask-size:147.148px 101.165px;mask-repeat:no-repeat;overflow:hidden;pointer-events:none}#toy-eyes{position:absolute;left:32.67px;top:32.67px;margin:0;mask:none;transform:translate(var(--eye-x,0px),var(--eye-y,0px)) rotate(var(--eye-r,0deg));transform-origin:50% 50%;will-change:transform}#toy-eyes>div{transform-origin:center}.system [data-node-id='412:5774']{isolation:isolate}.system [data-node-id='412:5780']{white-space:nowrap}.system [data-node-id='I412:5791;423:3084']{width:190px}.system [data-node-id='412:5766']{pointer-events:none}.system [data-node-id='412:5790']:hover,.system [data-node-id='412:5791']:hover,.system [data-node-id='412:5792']:hover{border-color:#38b791;transition:border-color .25s}.scenarios [role='tab']{text-align:left;transition:background .2s,transform .2s}.scenarios [role='tab']:hover{transform:translateX(3px)}.scenarios [role='tab'][aria-selected='true']{background:linear-gradient(134deg,#008489 14.931%,#38b791 91.301%)!important;border-color:transparent}.scenarios [role='tab'][aria-selected='true'] p{color:white}.scenarios [role='tab'] .f139 img{filter:none;transition:filter .2s}.scenarios [role='tab'][aria-selected='true'] .f139 img{filter:brightness(0) invert(1)}.scenarios [role='tab'][aria-selected='false']{background:#101f22!important;border:1px solid #2f3c3f}.scenarios [role='tab'][aria-selected='false'] p:first-child{color:#cfe6e2}.scenarios [role='tab'][aria-selected='false'] p:last-child{color:#949999}
 /* 中文与混排标题使用明确行盒，避免浏览器裁剪字体高度时发生重叠。 */
 [data-node-id='412:5764'],[data-node-id='425:6149']{text-box-trim:none;height:29px;line-height:29px;font-size:40px;display:flex;justify-content:center;align-items:center;white-space:nowrap}
 [data-node-id='412:5764'] span,[data-node-id='425:6149'] span{line-height:48px}
@@ -24,7 +24,11 @@
 .comparison{z-index:1}
 .footer-layout [data-node-id='273:1904'] p{line-height:48px}
 .footer-art [data-node-id='340:4567']{display:block;position:absolute;inset:0;filter:blur(14.275px)}
-.footer-art{background:#000e09;overflow:hidden}
+/* 底色随内容由深绿过渡到纸白，柔光移动时不露出黑色底板。 */
+.footer{background:var(--paper)}
+.footer-art{background:linear-gradient(#010c08 0 26%,#008489 58%,#f6fbfe 92%);overflow:hidden;mask-image:linear-gradient(#000 0 84%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0 84%,transparent 100%)}
+.footer-art>.f338{transform:scaleX(1.06);transform-origin:50% 0}
+.footer-art .f339{mask-image:linear-gradient(#000 0 70%,transparent 92%);-webkit-mask-image:linear-gradient(#000 0 70%,transparent 92%)}
 .hero-layout [data-node-id='356:1899'],.hero-layout [data-node-id='356:1928'],.hero-layout [data-node-id='356:1930']{height:0;bottom:auto}
 .demo-details{display:none}
 /* 演示顶栏使用明确的中文字体与单行布局，避免小数宽度舍入导致末字换行。 */
@@ -39,6 +43,9 @@
 #fc-toy{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
 #fc-toy.is-dragging{cursor:grabbing}
 #fc-toy img{-webkit-user-drag:none;pointer-events:none}
+/* 共用外层圆形裁切，避免浏览器将每层柔光截成矩形。 */
+#fc-toy>[data-node-id='412:5837']{width:196px;height:196px;overflow:hidden;border-radius:50%;clip-path:circle(50%)}
+#fc-toy>[data-node-id='412:5837']>[style*='mask-image']{mask-image:none!important;-webkit-mask-image:none!important}
 /* 外壳与表情整体悬浮，交互容器保持原位，避免鼠标命中区域随浮动抖动。 */
 #fc-toy>[data-node-id='412:5837']{transform-origin:50% 55%;animation:toy-float 5.2s ease-in-out infinite;animation-play-state:paused}
 #fc-toy[data-active='true']>[data-node-id='412:5837']{animation-play-state:running;will-change:transform}
@@ -48,6 +55,7 @@
 .toy-source{left:-26.13px;top:-49px;width:196px;height:196px}
 .toy-thinking,.toy-loading,.toy-smile{width:147.148px;height:101.165px;fill:#fcfdfe}
 #fc-toy[data-toy-state='follow'] #toy-eyes,
+#fc-toy[data-toy-state='blink'] #toy-eyes,
 #fc-toy[data-toy-state='source'] .toy-source,
 #fc-toy[data-toy-state='thinking'] .toy-thinking,
 #fc-toy[data-toy-state='loading'] .toy-loading,
@@ -60,6 +68,10 @@
 #fc-toy[data-toy-state='thinking'] .toy-thinking .toy-bar,#fc-toy[data-toy-state='loading'] .toy-loading .toy-bar{animation-play-state:running}
 #fc-toy[data-toy-state='smile'] .toy-smile-eyes{transform-box:fill-box;transform-origin:center;animation:toy-smile-pop .3s cubic-bezier(.2,1.5,.5,1) both}
 #fc-toy[data-active='false'] *,#fc-toy[data-active='false'] .toy-source [data-track]{animation-play-state:paused!important}
+/* 眼睛压缩与视线位移分层，持续移动鼠标不会重置眨眼时钟。 */
+#toy-eyes>div{animation:toy-blink 4.6s linear infinite;animation-play-state:paused;transition:none}
+#fc-toy[data-toy-state='follow'] #toy-eyes>div,#fc-toy[data-toy-state='blink'] #toy-eyes>div{animation-play-state:running}
+@keyframes toy-blink{0%,27%,31.5%,71%,75.5%,100%{transform:scaleY(1)}28.7%,29.5%,72.7%,73.5%{transform:scaleY(.08)}}
 @keyframes toy-accordion{0%,100%{transform:scaleY(.35);opacity:.55}50%{transform:scaleY(1.2);opacity:1}}
 @keyframes toy-smile-pop{0%{transform:scale(.87,.6)}65%{transform:scale(1.04,1.1)}100%{transform:scale(1)}}
 /* file:// 下浏览器限制外部 SVG mask，使用相同的圆形外边界和面罩内裁切。 */
@@ -80,7 +92,7 @@ dialog{padding:36px;width:min(480px,calc(100% - 32px));border:1px solid #cfe6e2;
 @media(max-width:760px){
  .scenarios [data-node-id='400:3170']{flex:none;min-height:82px}
  .footer{background:linear-gradient(#010c08 0 250px,#f6fbfe 250px)}
- .footer-art{mask-image:linear-gradient(#000 0 720px,transparent 1100px)}
+ .footer-art{mask-image:linear-gradient(#000 0 720px,transparent 1100px);-webkit-mask-image:linear-gradient(#000 0 720px,transparent 1100px)}
  .footer-layout [data-node-id='356:2351']{grid-row:4;grid-column:1}
  .footer-layout [data-node-id='356:2350']{grid-row:4;grid-column:2}
  .footer-layout [data-node-id='356:2349']{grid-row:5;grid-column:1/-1}
