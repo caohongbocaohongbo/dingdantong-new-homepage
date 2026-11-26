@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="2829.09" height="1006.82" viewBox="0 0 2829.09 1006.82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Subtract" filter="url(#filter0_f_0_151)">
+<path d="M303.371 303.693C613.371 586.693 1164.06 701.821 1566.54 701.821C1893.9 701.821 2265.17 578.043 2526.37 408.462" stroke-width="10" stroke="url(#paint0_linear_0_151)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_151" x="-1.19209e-06" y="2.6226e-06" width="2829.09" height="1006.82" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_0_151"/>
+</filter>
+<linearGradient id="paint0_linear_0_151" x1="304.29" y1="530.86" x2="2501.04" y2="530.86" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FBFCFE"/>
+<stop offset="1" stop-color="#0CCCA3"/>
+</linearGradient>
+</defs>
+</svg>

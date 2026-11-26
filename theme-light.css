@@ -1,0 +1,126 @@
+/* Figma 版本 C：亮白、蓝青绿主题。保留既有版式、交互与动画时序。 */
+:root {
+  --ink:#313333;
+  --paper:#f6fbfe;
+  --night:#fafcfd;
+  --teal:#007e89;
+  --mint:#12f4b1;
+  --theme-gradient:linear-gradient(134deg,#007e89 14.931%,#12f4b1 91.301%);
+}
+
+/* 首屏复用新版原始 SVG 图层；纯色底和渐变均来自设计稿。 */
+.hero-new-base {position:absolute;inset:0 0 -9.42%;}
+.hero-green-band {position:absolute;left:-159.59px;top:18px;width:2356.091px;height:623.244px;}
+.hero-green-band--second {mix-blend-mode:color;}
+.hero-green-band .hero-rotated {position:absolute;inset:0;display:flex;align-items:center;justify-content:center;container-type:size;}
+.hero-green-band--second .hero-rotated {inset:-8.02% 0 8.02%;}
+.hero-green-band .hero-rotated-shape {position:relative;flex:none;width:2331.381px;height:486.615px;transform:rotate(3.38deg) scaleX(-1);}
+.hero-band-image {position:absolute;}
+.hero-band-image img {display:block;width:100%;height:100%;max-width:none;}
+.hero-green-band .f45 {inset:29.04% 5.33% 7.08% .32%;}
+.hero-band-color {mix-blend-mode:color;}
+/* SVG 导出只保留渐进模糊的起始半径，补足柔边以贴近画布上的光带。 */
+.hero-green-band > .hero-rotated:nth-child(2) .hero-band-image {filter:blur(24px);}
+.hero-art .f57,.hero-layout .f57 {color:var(--ink);}
+.hero-layout .theme-keyword {background-image:linear-gradient(153deg,#007e89 14.931%,#12f4b1 91.301%);background-clip:text;-webkit-background-clip:text;color:transparent;}
+.hero-layout .f60 {background:rgba(246,251,254,.8);}
+.hero-layout [data-action='send'] {background:#020807;}
+.hero-layout [data-action='send']:hover {background:#007e89;}
+.hero-layout .f71,.site-header .f32 {background-image:var(--theme-gradient);border-color:transparent;}
+.hero-layout .f73,.site-header .f34 {background:rgba(255,255,255,.8);}
+.hero-layout .f74,.site-header .f35 {color:var(--ink);}
+.site-header .f29,.site-header .f30 {color:var(--ink);}
+.site-header a:hover,.site-header a[aria-current='location'] {color:#007e89;}
+.menu-toggle span {background:#313333;}
+.site-header.menu-open {background:#f6fbfef5;box-shadow:0 14px 40px #4c82811a;}
+.nav-motion-line {background:linear-gradient(90deg,#007e89,#12f4b1);}
+
+/* 流光保留原路径和循环，降低白色亮芯，使浅底上的光线有柔和层次。 */
+.hero-arc-current {mix-blend-mode:normal;opacity:.64;}
+.hero-layout .motion-goal:focus-within {box-shadow:0 0 0 3px #0ccca318,0 8px 32px #00848912;}
+.liquid-input > .liquid-edge {--edge-width:1.6px;}
+.liquid-input > .liquid-edge::before,.liquid-input > .liquid-edge::after {
+  background:conic-gradient(from var(--liquid-angle),#ffffff30 0deg,#d1f8ef66 28deg,#ffffffc7 58deg,#fff 92deg,#fff 114deg,#8ae8d959 146deg,#ffffff30 186deg,#d1f8ef66 216deg,#ffffffc7 252deg,#fff 286deg,#fff 310deg,#8ae8d959 338deg,#ffffff30 360deg);
+}
+.liquid-input > .liquid-edge::after {opacity:.16;}
+
+/* 核心对比沿用现有结构，仅同步浅底卡片与绿色边界。 */
+.wave-art {mix-blend-mode:color-burn;}
+.wave-art .f78 {background:#f6fbfe;}
+.theme-wave-layer {position:absolute;inset:-.71% -.44%;}
+.theme-wave-layer {mix-blend-mode:plus-darker;}
+.theme-wave-layer img {width:100%;height:100%;max-width:none;}
+.theme-wave-mist {position:absolute;inset:10.1% -4.22% 31.26% -13.02%;}
+.theme-wave-mist > div {position:absolute;inset:-4.26% -1.27% -5.4%;}
+.theme-wave-mist img {width:100%;height:100%;}
+.comparison .f91,.comparison .f120 {background:transparent;}
+.comparison .f94,.comparison .f97 {color:var(--ink);}
+.comparison .f104 {border-color:#0ccca3;box-shadow:inset 0 0 0 2px #0ccca3;}
+.comparison .f107,.comparison .f110,.comparison .f111,.comparison .f116,.comparison .f117 {
+  background-image:linear-gradient(164deg,#008489 14.931%,#38b791 91.301%);
+  background-clip:text;-webkit-background-clip:text;color:transparent;
+}
+
+/* 原深色区域转换为浅白底；按钮的选中状态与白色图标保持一致。 */
+.dark-sections {background:#fafcfd;color:var(--ink);}
+.scenarios .f127,.scenarios .f132,.system .f250,.system .f251,.system .f252,.pricing .f250,.pricing .f252 {color:var(--ink);}
+.scenarios .f131 {color:#08bfa2;}
+.scenarios .scene-motion-list [role='tab'],
+.scenarios .scene-motion-list [role='tab'][aria-selected='true'],
+.scenarios [role='tab'][aria-selected='false'] {background:#fff!important;border-color:rgba(197,206,218,.6);}
+.scenarios .scene-motion-list [role='tab']::before {background:var(--theme-gradient);}
+.scenarios .scene-motion-list [role='tab'][aria-selected='true'] {border-color:transparent;}
+.scenarios [role='tab'][aria-selected='false'] p:first-child {color:#313333;}
+.scenarios [role='tab'][aria-selected='false'] p:last-child {color:#7b898a;}
+.scenarios [role='tab'][aria-selected='true'] p {color:#fff;}
+.scenarios [data-node-id='400:3250'] {background-image:linear-gradient(90deg,#0ccca3 0%,#f5f6fa 100%)!important;box-shadow:0 16px 40px #274c4b12;}
+.scenarios .f149 {background:linear-gradient(90deg,#0ccca3 0%,#d3f3ea 45%,#f5f6fa 100%);border-color:#dcece9;}
+.demo-details {color:#5e7b82;border-color:#d4ebe8;background:#fff;}
+
+.system {isolation:isolate;}
+.system::before {content:'';position:absolute;z-index:-1;left:50%;width:calc(100vw / var(--content-scale));top:-140px;bottom:-180px;transform:translateX(-50%);background:#f4f9fb;}
+.system .f256 {background:rgba(255,255,255,.72);border-color:#d4ebe8;}
+.system .f260 {background:radial-gradient(ellipse at 50% 45%,#bdf8f2 0%,#eafaf9 50%,#f8fdfc 100%);border-color:#82dbcf;}
+.system .f258,.system .f281,.system .f291 {color:#5e7b82;}
+.system .f259,.system .f280,.system .f287,.system .f298 {color:#313333;}
+.system .f289 {background:#eaf7f2;}
+.system .f290 {color:#008489;}
+.system .f293 {background:#e9f2f8;border-color:#dbe9ed;}
+.system .f283 {color:#fff;}
+
+.pricing .f304 {background:#fff;border-color:#dfe5e7;box-shadow:0 8px 24px #274c4b08;}
+.pricing .f318 {background:radial-gradient(ellipse at 100% 0%,#f9f0ff 0%,transparent 60%),linear-gradient(#f0faf9,#fff 32%);border-color:#0ccca3;}
+.pricing .f306,.pricing .f307,.pricing .f321,.pricing .f325 {color:#313333;}
+.pricing .f308,.pricing .f326 {color:#7b898a;}
+.pricing .f310 {background:#e2f5f0;}
+.pricing .f312,.pricing .f327 {background:#f2f8f9;}
+.pricing .f313,.pricing .f317,.pricing .f330 {color:#313333;}
+.pricing .f328 {background-image:linear-gradient(100deg,#007e89,#0ccca3);filter:none;}
+.pricing .f329,.pricing .f328 .f317 {color:#fff;}
+.pricing .f327 .f76 img {filter:brightness(0) saturate(100%) invert(44%) sepia(57%) saturate(778%) hue-rotate(123deg) brightness(91%) contrast(97%);}
+.pricing .f73 {background:var(--theme-gradient);border-color:transparent;}
+.pricing .f74 {color:#fff;}
+.liquid-card {border-color:#0ccca3;}
+
+/* 页脚使用浅色源素材，边缘裁切和原有缓慢漂移继续生效。 */
+.footer {background:#f6fbfe;}
+.footer-art {background:linear-gradient(#fafcfd 0 12%,#dcfaf3 65%,#f6fbfe 100%);}
+.footer-art [data-node-id='340:4567'] {filter:blur(14.275px);}
+.footer-art .f341 {inset:3.28% 6.46% 18.81% 11.32%;}
+.footer-art .f341 > .theme-footer-soft {position:absolute;inset:-8.58% -4.73%;}
+.footer-art .f342 {bottom:18.52%;}
+.footer-layout .f390,.footer-layout .f393 {color:#313333;}
+.footer-layout .f396 {background:rgba(246,251,254,.8);}
+.footer-layout .f400,.footer-layout .f405,.footer-layout .f410,.footer-layout .f417,
+.footer-layout .f401,.footer-layout .f402,.footer-layout .f403,.footer-layout .f406,.footer-layout .f407,.footer-layout .f408,
+.footer-layout .f411,.footer-layout .f412,.footer-layout .f418,.footer-layout .f419,.footer-layout .f423,.footer-layout .f424 {color:#313333;}
+.footer-layout .f413,.footer-layout .f414 {color:#8b9b9f;}
+
+@media(max-width:760px) {
+  .hero-arc-current {opacity:.5;}
+  .system::before {width:100vw;top:-80px;bottom:-80px;}
+  .footer {background:#f6fbfe;}
+}
+
+/* 使用 Figma 卡片的原始多层渐变。 */
+.comparison .f104 {background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 546.61 812.56' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(54.7 9.1676e-13 -6.365e-13 39.351 -0.45222 -4.5106e-14)'><stop stop-color='rgba(230,254,249,1)' offset='0'/><stop stop-color='rgba(231,253,252,0)' offset='1'/></radialGradient></defs></svg>"), linear-gradient(179.86207379044384deg, rgb(221, 218, 251) 5.9939%, rgba(255, 255, 255, 0) 23.221%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);}

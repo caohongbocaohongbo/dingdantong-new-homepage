@@ -23,8 +23,8 @@
     ['.footer-art [data-node-id="340:4567"]', 22, -8, 22, -4, 1.012, .97],
     ['.footer-art .f359', 40, -15, 14, -3, 1.035, .88],
     ['.footer-art .f360', -35, 12, 18, -5, 1.025, .91],
-    ['.footer-art img[src$="1c54d.svg"]', 25, 8, 17, -2, 1.02, .9],
-    ['.footer-art img[src$="ef7a5.svg"]', -20, -6, 20, -6, 1.02, .94]
+    ['.footer-art img[src$="577e6.svg"]', 25, 8, 17, -2, 1.02, .9],
+    ['.footer-art img[src$="f41dc.svg"]', -20, -6, 20, -6, 1.02, .94]
   ];
   for (const [selector,x,y,seconds,delay,scale,opacity] of layerSettings) {
     const element = $(selector);
@@ -198,7 +198,13 @@
   let currentNav = null, hoveringNav = null, navFrame = 0;
   function placeNav() {
     const link = hoveringNav || currentNav;
-    if (!link || mobile.matches) { navLine.style.opacity = '0'; return; }
+    if (!link || mobile.matches) {
+      navLine.style.opacity = '0';
+      // 收起时清空旧坐标，避免宽屏切换至窄屏后不可见下划线撑出横向滚动。
+      navLine.style.width = '0px';
+      navLine.style.transform = 'translate(0,0)';
+      return;
+    }
     const rect = link.getBoundingClientRect(), box = nav.getBoundingClientRect();
     navLine.style.width = `${rect.width}px`;
     navLine.style.transform = `translate(${rect.left - box.left}px, ${rect.bottom - box.top + 7}px)`;

@@ -17,16 +17,16 @@
         <filter id="order-current-soft" x="-10%" y="-20%" width="120%" height="140%"><feGaussianBlur stdDeviation="3.5"/></filter>
       </defs>
       <g mask="url(#order-current-window)" fill="none" stroke-linecap="round">
-        <path d="${arc}" stroke="#38d7b0" stroke-width="64" opacity=".52" filter="url(#order-current-bloom)"/>
-        <path d="${arc}" stroke="#8cebd5" stroke-width="22" opacity=".72" filter="url(#order-current-soft)"/>
-        <path d="${arc}" stroke="#d9fff5" stroke-width="6" opacity=".47" filter="url(#order-current-soft)"/>
+        <path d="${arc}" stroke="#10bda8" stroke-width="56" opacity=".26" filter="url(#order-current-bloom)"/>
+        <path d="${arc}" stroke="#71e4d0" stroke-width="22" opacity=".34" filter="url(#order-current-soft)"/>
+        <path d="${arc}" stroke="#e2fff8" stroke-width="6" opacity=".32" filter="url(#order-current-soft)"/>
         
       </g>
     </svg>`);
   regions.push(hero);
 
   // 核心对比上方保留原波形，取消位移滤镜，避免缩放时出现横向亮线。
-  // 深色区域的过渡图继续使用柔边位移。
+  // 浅色转场仍使用原有柔边位移。
   for (const [selector, imageSelector, id, strength, duration] of [
     ['.transition-art', '.f1 > img', 'order-transition-edge', 10, 27]
   ]) {
