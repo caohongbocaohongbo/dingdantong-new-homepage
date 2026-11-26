@@ -1,0 +1,131 @@
+/* 2026-11-26：按最新 Figma 同步经营目标、权益卡片和演示窗口裁切。 */
+.updated-section-heading {display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;color:#313333;}
+.updated-section-heading h2 {font-size:40px;line-height:1.4;font-weight:700;}
+.updated-section-heading p {font-size:20px;line-height:1.5;}
+.theme-keyword {background-image:var(--theme-gradient);background-clip:text;-webkit-background-clip:text;color:transparent;}
+.system-network {height:724px;}
+.system-network .updated-section-heading {margin-bottom:80px;}
+.system-stage {position:relative;display:grid;grid-template-columns:296px 1fr 296px;height:480px;isolation:isolate;background:radial-gradient(ellipse 59% 55% at 50% 50%,#21fff499 0%,#c8f5ffa1 44%,#eaeaea00 100%);}
+.system-stage-art {position:absolute;inset:0;pointer-events:none;z-index:-1;}
+.system-stage-backdrop {position:absolute;left:0;top:0;}
+.system-stage-light {position:absolute;left:145px;top:123.59px;}
+.system-stage-arrows {position:absolute;left:385px;top:241px;}
+.network-panel {padding:28px;border:1.5px solid #d4ebe8;border-radius:18px;background:linear-gradient(146deg,#ffffffd6,#f7fffc9e);display:flex;flex-direction:column;gap:30px;min-width:0;}
+.network-output {border-color:#cdebe4;background:linear-gradient(146deg,#ffffffd9,#f4fffba8);}
+.network-panel-heading {display:flex;gap:10px;align-items:center;}
+.network-panel-heading>img {flex:none;}
+.network-panel-heading>div {flex:1;min-width:0;}
+.network-panel-heading h3 {font-size:24px;line-height:28px;white-space:nowrap;}
+.network-panel-heading p {margin-top:4px;font-size:14px;line-height:22px;color:#5e7b82;white-space:nowrap;}
+.network-output .network-panel-heading p {margin-top:7px;}
+.network-output-title {display:flex;align-items:center;gap:12px;}
+.network-output-title>span {font-size:13px;line-height:19px;white-space:nowrap;padding:6px 14px;border:1px solid #d5e6cd;border-radius:100px;background:#f4faf6;color:#249d99;}
+.network-tools {display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0;}
+.network-tools li {display:flex;align-items:center;gap:4px;min-height:48px;background:#e9f2f8;border-radius:14px;font-size:18px;line-height:31px;font-weight:700;color:#313333;}
+.network-tools img {margin:0 8px;flex:none;}
+.network-tools span {white-space:nowrap;}
+.network-output .network-tools {flex:1;}
+.network-output .network-tools li {min-height:0;flex:1;}
+.network-agent {position:relative;text-align:center;min-width:0;}
+.network-core-label {padding-top:20px;color:#158e85;font-size:13px;line-height:19px;letter-spacing:2.6px;}
+.network-agent-character {position:absolute;top:88px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;}
+.network-agent-tooltip {position:relative;height:40px;width:104px;}
+.network-agent-tooltip>img {position:absolute;top:5px;left:0;transform:scaleY(-1);}
+.network-agent-tooltip span {position:relative;display:block;padding-top:6px;color:#00848a;font:14px/22px Inter,sans-serif;}
+.network-agent-description {position:absolute;top:373px;left:50%;transform:translateX(-50%);white-space:nowrap;}
+.network-agent-description h3 {font-size:40px;line-height:58px;}
+.network-agent-description p {font-size:16px;line-height:20px;}
+.pricing-updated {height:auto;display:flex;flex-direction:column;align-items:center;gap:40px;color:#313333;}
+.plans-layout {display:grid;grid-template-columns:338.76px 1fr;gap:19.24px;width:100%;align-items:end;}
+.plan-basic {height:564px;padding:29px 27px 28px;background:#fff;border:1px solid #eaeaea;border-radius:19px;box-shadow:0 7px 25px #22222205;}
+.plan-card-heading {display:flex;align-items:center;justify-content:space-between;height:38px;}
+.plan-card-heading h3,.plan-copy {margin:0;}
+.plan-copy-mobile {display:none;}
+.plan-badge {padding:4px 9px;border:1px solid #eaeaea;border-radius:5px;background:#ffffffa1;}
+.plan-intro {padding-top:12px;height:61px;}
+.plan-free-quota {display:flex;align-items:center;gap:10px;padding-top:24px;height:84px;}
+.plan-free-quota strong,.plan-pro-price strong {font-family:'Google Sans','Noto Sans SC',sans-serif;font-size:65px;line-height:1;font-weight:700;letter-spacing:-3.25px;}
+.plan-basic-action {display:flex;align-items:center;justify-content:center;gap:11px;width:100%;min-height:46px;margin-top:25px;border:1px solid #c9cacb;border-radius:11px;}
+.plan-basic-action:hover {border-color:#008489;background:#f4faf9;}
+.plan-basic-features {margin-top:25px;border-top:1px solid #e1ece8;padding-top:20px;}
+.plan-feature-list {list-style:none;margin:0;padding:17px 0 0;display:flex;flex-direction:column;gap:20px;}
+.plan-feature-list li {display:flex;gap:11px;align-items:flex-start;min-width:0;}
+.plan-feature-icon {flex:none;display:flex;align-items:center;justify-content:center;}
+.plan-basic .plan-feature-icon {padding-top:3px;}
+.plan-feature-description {margin-top:5px;}
+.plan-pro {position:relative;isolation:isolate;border:1px solid #007e89;border-radius:19px;background:radial-gradient(ellipse at 100% 0%,#fbf4fc 0%,#fff 60%);box-shadow:0 7px 25px #22222205;}
+.plan-pro-banner {display:flex;align-items:center;justify-content:center;gap:8px;height:51px;border-radius:18px 18px 0 0;background:linear-gradient(90deg,#ecf7f8,#faf3fb);}
+.plan-pro-body {padding:28px;height:556px;}
+.plan-pro-title {display:flex;align-items:center;gap:12px;}
+.plan-pro-badge {width:26px;height:16px;mask-image:url('assets/updates-nov26/030c0.svg');mask-repeat:no-repeat;mask-size:26px 16px;}
+.plan-pro .plan-badge {border-color:#c9edee;}
+.plan-pro-columns {display:grid;grid-template-columns:304.5px minmax(0,1fr);gap:30px;min-height:462.22px;padding-top:4px;}
+.plan-pro-purchase {display:flex;flex-direction:column;border-right:1px solid #eaeaea;padding-right:28px;min-width:0;}
+.plan-pro-price {position:relative;height:108.594px;flex:none;}
+.plan-pro-price strong {position:absolute;left:22.6px;top:39px;line-height:70px;}
+.plan-pro-price strong span {font-weight:400;}
+.plan-currency {position:absolute;left:0;top:67px;}
+.plan-period {position:absolute;left:160.84px;top:82px;}
+.plan-year-label {padding-top:8px;padding-bottom:26px;height:52px;}
+.plan-upgrade-action {display:flex;align-items:center;justify-content:center;gap:11px;position:relative;min-height:46px;border-radius:11px;background:#313333;width:100%;font-size:14px;}
+.plan-upgrade-action>span:first-child {background:linear-gradient(#edd28e 21.349%,#b7944e 71.627%,#e7c880 96.765%);background-clip:text;-webkit-background-clip:text;color:transparent;}
+.plan-crown {position:absolute;right:-.43px;top:-.3px;display:flex;align-items:center;justify-content:center;width:25px;height:25px;overflow:hidden;border-radius:50%;background:conic-gradient(from 90deg,#b08b41,#d3af5c,#ba913e,#f3d58a,#906322,#ddb760,#b08b41);box-shadow:inset -.53px -.636px .794px #ffe8a68c,inset .741px 1.059px 1.165px #68451266;}
+.plan-payment-note {display:flex;align-items:center;justify-content:center;gap:6px;padding-top:13px;}
+.plan-includes {display:flex;align-items:flex-start;gap:10px;margin-top:auto;padding-top:22px;min-height:62px;}
+.plan-includes .plan-feature-icon {width:27px;height:27px;border-radius:7px;background:#f2f6f6;}
+.plan-pro-features {padding-top:13px;}
+.plan-pro-features>.plan-copy {margin-bottom:15px;}
+.plan-pro-features .plan-feature-list {padding-top:0;gap:30px;}
+.plan-pro-features .plan-feature-list li {gap:20px;}
+.plan-pro-features .plan-feature-icon {width:34px;height:34px;border-radius:10px;background:#f2f6f6;}
+.plan-pro-features .plan-feature-description {margin-top:4px;}
+.plan-contact-action {padding:20px 60px;border-radius:999px;background:var(--theme-gradient);color:white;font-size:18px;line-height:22px;}
+/* 底色、内层窗口共用外层圆角裁切，避免渐变色在左侧两角露出方块。 */
+.scenarios #demo-panel {overflow:hidden;border-radius:14px;isolation:isolate;}
+.scenarios #demo-panel>[data-node-id='404:4759'] {overflow:hidden;border-radius:12px;}
+@media(max-width:760px) {
+  .updated-section-heading {gap:12px;}
+  .updated-section-heading h2 {font-size:clamp(24px,6.5vw,34px);line-height:1.5;}
+  .updated-section-heading p {font-size:14px;line-height:1.8;}
+  .system-network {height:auto;}
+  .system-network .updated-section-heading {margin-bottom:34px;}
+  .system-stage {grid-template-columns:minmax(0,1fr);height:auto;gap:20px;background:none;}
+  .system-stage-art {overflow:hidden;top:312px;height:460px;mask-image:linear-gradient(transparent,#000 15%,#000 88%,transparent);}
+  .system-stage-backdrop {left:50%;transform:translateX(-50%);}
+  .system-stage-light {left:50%;top:100px;transform:translateX(-50%) scale(.7);transform-origin:50% 60%;mask-image:linear-gradient(transparent 0 40%,#000 75%);}
+  .system-stage-arrows {display:none;}
+  .network-panel {padding:24px;gap:24px;}
+  .network-panel-heading h3 {font-size:22px;}
+  .network-panel-heading p {font-size:13px;}
+  .network-tools li {min-height:48px;font-size:16px;}
+  .network-agent {height:440px;}
+  .network-agent-character {top:60px;}
+  .network-agent-description {top:345px;white-space:normal;width:100%;}
+  .network-agent-description h3 {font-size:32px;line-height:50px;}
+  .network-agent-description p {font-size:13px;line-height:22px;}
+  .network-output-title {gap:8px;}
+  .network-output-title>span {padding:5px 8px;font-size:11px;}
+  .network-output .network-tools li {min-height:48px;}
+  .pricing-updated {gap:32px;}
+  .plans-layout {grid-template-columns:minmax(0,1fr);gap:24px;}
+  .plan-basic {height:auto;padding:26px 22px;}
+  .plan-pro-body {height:auto;padding:24px 22px;}
+  .plan-pro-columns {grid-template-columns:minmax(0,1fr);gap:30px;min-height:0;}
+  .plan-pro-purchase {border-right:0;border-bottom:1px solid #eaeaea;padding-right:0;padding-bottom:26px;}
+  .plan-includes {margin-top:38px;}
+  .plan-pro-features {padding-top:0;}
+  .plan-feature-list {gap:20px;}
+  .plan-pro-features .plan-feature-list li {gap:14px;}
+  .plan-copy>img {display:none;}
+  .plan-copy-mobile {display:block;font-size:13px;font-weight:400;line-height:1.7;color:#7b8584;}
+  h4.plan-copy .plan-copy-mobile {color:#313333;font-weight:500;font-size:14px;}
+  .plan-intro .plan-copy {max-width:210px;}
+  .plan-feature-description {margin-top:5px;}
+  .plan-pro-features li:first-child .plan-feature-description .plan-copy-mobile {color:#df7b81;}
+  .plan-pro-banner .plan-copy-mobile {font-size:12px;color:#313333;}
+  .plan-pro-banner {padding:0 12px;gap:8px;}
+  .plan-payment-note .plan-copy-mobile,.plan-year-label .plan-copy-mobile {font-size:12px;}
+  .plan-free-quota .plan-copy:first-child .plan-copy-mobile {color:#313333;font-weight:500;}
+  .plan-contact-action {font-size:16px;padding:18px 40px;}
+  .scenarios #demo-panel {border-radius:calc(14px * var(--demo-scale));}
+}

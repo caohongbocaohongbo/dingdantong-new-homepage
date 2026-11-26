@@ -110,7 +110,7 @@
       [scenes[currentSceneIndex].prompt, '', ...scenes[currentSceneIndex].lines].forEach(line => { const p = document.createElement('p'); p.textContent = line || '\u200b'; content.append(p); });
       showDialog(scenes[currentSceneIndex].title, content);
     } else if (action === 'contact') showDialog('联系订单通', contactContent);
-    else if (action === 'upgrade') showDialog('升级专业版', '<p>专业版 · ¥ 1999 / 年 / 账户</p>' + contactContent);
+    else if (action === 'upgrade') showDialog('升级专业版', '<p>专业版 · ¥ 1,999 / 年</p>' + contactContent);
     else if (action === 'api') showDialog('API 文档', '<p>如需 API 文档、接口权限与对接支持，请联系订单通服务团队。</p>' + contactContent);
     else if (action === 'login') window.orderLogin?.open(target);
     else showDialog('免费注册', '<p>当前页面为产品交互演示。如需登录或开通真实账户，请联系订单通。</p>' + contactContent);

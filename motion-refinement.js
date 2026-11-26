@@ -50,7 +50,7 @@
 
   // 复用圆角边缘流光：专业版与登录按钮沿用配色，输入框使用纯白细管线。
   for (const [selector, kind] of [
-    ['.pricing [data-node-id="425:6185"]', 'liquid-card'],
+    ['.pricing .plan-pro', 'liquid-card'],
     ['.hero-layout [data-action="login"]', 'liquid-button'],
     ['.hero-layout [data-node-id="343:4737"]', 'liquid-input']
   ]) {

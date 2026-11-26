@@ -38,7 +38,7 @@
   const ambientRegions = $$('.hero-art, .hero-award, .transition-art, .footer-art');
   ambientRegions.forEach(element => element.classList.add('ambient-region'));
   // 只增强原本已经使用渐变文字的元素。
-  const keywords = $$('.hero-layout h1 span, .system [data-node-id="412:5764"] span, .pricing [data-node-id="425:6149"] span')
+  const keywords = $$('.hero-layout h1 span, .system .theme-keyword, .pricing .theme-keyword')
     .filter(element => {
       const style = getComputedStyle(element);
       return style.backgroundImage !== 'none' && (style.backgroundClip === 'text' || style.webkitBackgroundClip === 'text');
