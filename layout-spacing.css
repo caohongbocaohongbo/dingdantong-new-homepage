@@ -1,0 +1,53 @@
+/* 按 Figma 1920px 最新整页校准纵向节奏，背景图不再决定内容间距。 */
+.transition-art {display:none;}
+.comparison .f104 {border-width:4px;box-shadow:none;}
+
+@media(min-width:761px) {
+  /* 优势区结束于 1731px，核心区别从 2070px 开始。 */
+  .wave-band {height:calc(339px * var(--content-scale));margin-top:0;}
+  .comparison {height:calc(985.564px * var(--content-scale));}
+  .comparison > .content {height:985.564px;}
+  .transition-band {height:calc(140.436px * var(--content-scale));margin-top:0;}
+
+  /* 场景内容从 3328px 开始，执行网络和权益标题依次对齐设计稿。 */
+  .dark-sections {margin-top:0;padding-top:calc(132px * var(--content-scale));padding-bottom:calc(132px * var(--content-scale));}
+  .system-network {height:auto;margin-top:335px;}
+  .system::before {top:-203px;bottom:-202px;}
+  .pricing-updated {margin-top:307.296875px;}
+
+  /* 还原设计稿裁去字体上下空隙后的标题高度，避免每组标题多占 40px。 */
+  .updated-section-heading h2 {line-height:29px;}
+  .updated-section-heading p {line-height:17px;}
+  @supports(text-box-trim:trim-both) {
+    .updated-section-heading h2 {line-height:98px;text-box-trim:trim-both;text-box-edge:cap alphabetic;}
+  }
+
+  .footer {height:calc(1145px * var(--content-scale));margin-top:calc(-26px * var(--content-scale));}
+}
+
+@media(min-width:1921px) {
+  /* 超宽屏仅延展装饰，正文与页脚不额外增加纵向留白。 */
+  .hero {height:1009px;}
+  .hero-layout {translate:0 0;}
+  .footer-layout [data-node-id='273:1904'],
+  .footer-layout [data-node-id='273:1905'],
+  .footer-layout [data-node-id='273:1906'],
+  .footer-layout [data-node-id='356:2351'] > p,
+  .footer-layout [data-node-id='356:2350'] > p,
+  .footer-layout [data-node-id='356:2349'] > p,
+  .footer-layout [data-node-id='356:2375'] > p,
+  .footer-layout [data-node-id='356:2438'] > *,
+  .footer-layout [data-node-id='273:1923'],
+  .footer-layout [data-node-id='273:1924'] {translate:0 0;}
+}
+
+@media(max-width:760px) {
+  /* 单列布局保留阅读停顿，同时收紧旧版大幅转场和页脚占位。 */
+  .wave-band {height:120px;margin-top:0;}
+  .transition-band {height:64px;margin-top:0;}
+  .dark-sections {margin-top:0;padding-top:56px;padding-bottom:32px;}
+  .system-network,.pricing-updated {margin-top:96px;}
+  .system::before {top:-48px;bottom:-48px;}
+  .footer {min-height:0;}
+  .footer-layout {padding-top:96px;}
+}

@@ -21,14 +21,14 @@
 .network-output-title {display:flex;align-items:center;gap:12px;}
 .network-output-title>span {font-size:13px;line-height:19px;white-space:nowrap;padding:6px 14px;border:1px solid #d5e6cd;border-radius:100px;background:#f4faf6;color:#249d99;}
 .network-tools {display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0;}
-.network-tools li {display:flex;align-items:center;gap:4px;min-height:48px;background:#e9f2f8;border-radius:14px;font-size:18px;line-height:31px;font-weight:700;color:#313333;}
+.network-tools li {display:flex;align-items:center;gap:4px;min-height:48px;background:#e9f2f8;border-radius:14px;font-size:14px;line-height:31px;font-weight:700;color:#313333;}
 .network-tools img {margin:0 8px;flex:none;}
 .network-tools span {white-space:nowrap;}
 .network-output .network-tools {flex:1;}
 .network-output .network-tools li {min-height:0;flex:1;}
 .network-agent {position:relative;text-align:center;min-width:0;}
-.network-core-label {padding-top:20px;color:#158e85;font-size:13px;line-height:19px;letter-spacing:2.6px;}
-.network-agent-character {position:absolute;top:88px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;}
+.network-core-label {padding-top:34px;color:#5e7b82;font-size:12px;line-height:19px;font-weight:400;letter-spacing:2.4px;}
+.network-agent-character {position:absolute;top:78px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:20px;}
 .network-agent-tooltip {position:relative;height:40px;width:104px;}
 .network-agent-tooltip>img {position:absolute;top:5px;left:0;transform:scaleY(-1);}
 .network-agent-tooltip span {position:relative;display:block;padding-top:6px;color:#00848a;font:14px/22px Inter,sans-serif;}
@@ -98,9 +98,10 @@
   .network-panel {padding:24px;gap:24px;}
   .network-panel-heading h3 {font-size:22px;}
   .network-panel-heading p {font-size:13px;}
-  .network-tools li {min-height:48px;font-size:16px;}
+  .network-tools li {min-height:48px;}
   .network-agent {height:440px;}
-  .network-agent-character {top:60px;}
+  .network-core-label {padding-top:20px;}
+  .network-agent-character {top:60px;gap:10px;}
   .network-agent-description {top:345px;white-space:normal;width:100%;}
   .network-agent-description h3 {font-size:32px;line-height:50px;}
   .network-agent-description p {font-size:13px;line-height:22px;}
