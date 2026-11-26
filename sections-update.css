@@ -58,6 +58,7 @@
 .plan-pro-body {padding:28px;height:556px;}
 .plan-pro-title {display:flex;align-items:center;gap:12px;}
 .plan-pro-badge {width:26px;height:16px;mask-image:url('assets/updates-nov26/030c0.svg');mask-repeat:no-repeat;mask-size:26px 16px;}
+.file-preview .plan-pro-badge {mask-image:none;-webkit-mask-image:none;border-radius:3px;overflow:hidden;}
 .plan-pro .plan-badge {border-color:#c9edee;}
 .plan-pro-columns {display:grid;grid-template-columns:304.5px minmax(0,1fr);gap:30px;min-height:462.22px;padding-top:4px;}
 .plan-pro-purchase {display:flex;flex-direction:column;border-right:1px solid #eaeaea;padding-right:28px;min-width:0;}
